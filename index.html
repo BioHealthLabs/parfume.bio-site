@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="verification" content="bacb74fbd2092e56d140909d788b3e11" />
+
+  <title>Parfume.bio – Perfume Guides (EU spelling)</title>
+  <meta name="description"
+        content="Parfume vs perfume vs fragrance: EU spelling, concentration differences (EDT/EDP/Parfum), and EU buying tips. A support guide that points to Fragrance.bio comparisons." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.parfume.bio/" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
+    /* ===== Consent (HARD) ===== */
+    body.consent-locked {
+      overflow: hidden !important;
+      touch-action: none !important;
+    }
+    .consent-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: none; /* shown via JS */
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .consent-overlay[aria-hidden="false"] { display: flex; }
+
+    .consent-modal {
+      width: 100%;
+      max-width: 720px;
+      background: #0b1220;
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+    }
+    .consent-header { padding: 18px 18px 0 18px; }
+    .consent-title {
+      margin: 0;
+      font-size: 1.1rem;
+      letter-spacing: 0.01em;
+    }
+    .consent-body {
+      padding: 14px 18px 18px 18px;
+      line-height: 1.55;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+    .consent-body p { margin: 10px 0; }
+    .consent-list { margin: 12px 0 0 0; padding-left: 18px; }
+    .consent-list li { margin: 6px 0; }
+    .consent-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 16px 18px 18px 18px;
+      background: rgba(2, 6, 23, 0.5);
+      border-top: 1px solid rgba(148, 163, 184, 0.14);
+    }
+    .consent-btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.92rem;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .consent-accept { background: #ec4899; color: #0b1220; }
+    .consent-reject {
+      background: transparent;
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+    .consent-links {
+      margin-left: auto;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+    .consent-links a { color: #93c5fd; text-decoration: none; }
+    .consent-links a:hover { text-decoration: underline; }
+  </style>
+
+  <!-- Consent + GA loader (GA4 loads only AFTER accept) -->
+  <script>
+    (function () {
+      const CONSENT_KEY = "ronarn_consent_analytics_v1";
+
+      // Shared GA4 Measurement ID for the whole network (replace with your real GA4 ID):
+      // Example format: G-XXXXXXXXXX
+      const GA_ID = "G-REPLACE_ME";
+
+      function lockPage() {
+        document.body.classList.add("consent-locked");
+        const overlay = document.getElementById("consent-overlay");
+        if (overlay) overlay.setAttribute("aria-hidden", "false");
+      }
+
+      function unlockPage() {
+        document.body.classList.remove("consent-locked");
+        const overlay = document.getElementById("consent-overlay");
+        if (overlay) overlay.setAttribute("aria-hidden", "true");
+      }
+
+      function loadGA4() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+
+        const s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+
+        gtag("js", new Date());
+        gtag("config", GA_ID, { anonymize_ip: true });
+      }
+
+      function setConsent(value) { localStorage.setItem(CONSENT_KEY, value); }
+      function getConsent() { return localStorage.getItem(CONSENT_KEY); }
+      function clearConsent() { localStorage.removeItem(CONSENT_KEY); }
+
+      window.__openPrivacySettings = function () {
+        clearConsent();
+        window.location.reload();
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const saved = getConsent();
+
+        if (saved === "accepted") { loadGA4(); unlockPage(); return; }
+        if (saved === "rejected") { unlockPage(); return; }
+
+        lockPage();
+
+        const btnAccept = document.getElementById("consent-accept");
+        const btnReject = document.getElementById("consent-reject");
+
+        btnAccept.addEventListener("click", function () {
+          setConsent("accepted");
+          loadGA4();
+          unlockPage();
+        });
+
+        btnReject.addEventListener("click", function () {
+          setConsent("rejected");
+          unlockPage();
+        });
+      });
+    })();
+  </script>
+</head>
+
+<body class="consent-locked">
+  <!-- HARD Consent Overlay -->
+  <div id="consent-overlay" class="consent-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Privacy choices">
+    <div class="consent-modal">
+      <div class="consent-header">
+        <h2 class="consent-title">Privacy choices</h2>
+      </div>
+      <div class="consent-body">
+        <p>
+          Parfume.bio uses <strong>analytics</strong> to understand which topics are useful and which guides people read.
+          This helps us improve educational content.
+        </p>
+        <ul class="consent-list">
+          <li><strong>If you accept:</strong> we load Google Analytics (GA4) to measure visits and basic usage trends.</li>
+          <li><strong>If you reject:</strong> the site still works normally, but we do not load analytics.</li>
+        </ul>
+        <p>
+          Analytics consent is optional and is only about <strong>analytics</strong>.
+        </p>
+      </div>
+      <div class="consent-actions">
+        <button id="consent-accept" class="consent-btn consent-accept" type="button">Accept analytics</button>
+        <button id="consent-reject" class="consent-btn consent-reject" type="button">Reject</button>
+
+        <div class="consent-links">
+          <span>Learn more:</span>
+          <a href="/privacy.html">Privacy</a>
+          <span>·</span>
+          <a href="/disclosure.html">Disclosure</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="brand-name">Parfume.bio</div>
+        <div class="brand-tagline">
+          EU spelling guide + concentration basics. Support hub for Fragrance.bio.
+        </div>
+      </div>
+
+      <div class="trust-tags">
+        <span class="trust-tag">Education-first</span>
+        <span class="trust-tag">EU context</span>
+        <span class="trust-tag">No paid rankings</span>
+      </div>
+
+      <!-- TABS -->
+      <nav class="tabs" aria-label="Primary">
+        <a class="tab is-active" href="/" aria-current="page">Overview</a>
+        <a class="tab" href="#spelling">Parfume vs Perfume</a>
+        <a class="tab" href="#concentration">EDT vs EDP</a>
+        <a class="tab" href="#eu">EU Buying Tips</a>
+        <a class="tab" href="https://www.fragrance.bio/?utm_source=parfume.bio&utm_medium=referral&utm_campaign=network" target="_blank" rel="noopener">Guides</a>
+        <a class="tab" href="/about.html">About</a>
+        <a class="tab" href="/privacy.html">Privacy</a>
+        <a class="tab" href="/disclosure.html">Disclosure</a>
+        <a class="tab" href="/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div>
+          <h1 id="hero-heading" class="hero-title">
+            Parfume vs perfume vs fragrance — and what “EDT/EDP/Parfum” actually means.
+          </h1>
+
+          <p class="hero-subtitle">
+            Parfume.bio is a lightweight support node in the network. It exists to capture EU/Scandinavian spelling and
+            help people understand terminology quickly — then send them to the main comparison hub.
+          </p>
+
+          <ul class="hero-list">
+            <li>Parfume/perfume/fragrance: spelling, meaning, and shopping intent.</li>
+            <li>EDT vs EDP vs Parfum: concentration basics and real-world expectations.</li>
+            <li>EU buying tips: testers, batch codes, grey market, and returns.</li>
+          </ul>
+
+          <div class="hero-highlight">
+            Want top picks and comparisons? Use Fragrance.bio — this page stays educational and simple.
+          </div>
+
+          <div class="hero-actions">
+            <a href="https://www.fragrance.bio/?utm_source=parfume.bio&utm_medium=referral&utm_campaign=network"
+               class="btn-primary" target="_blank" rel="noopener">
+              Go to Fragrance.bio top picks
+              <span class="chevron">›</span>
+            </a>
+
+            <a href="#spelling" class="btn-secondary">Spelling explained</a>
+            <a href="#concentration" class="btn-secondary">EDT vs EDP</a>
+          </div>
+        </div>
+
+        <aside class="hero-aside">
+          <p class="hero-note">
+            Quick rule: concentration is not a guarantee. An EDP can perform worse than an EDT depending on composition.
+            Use concentration as a hint, not a promise.
+          </p>
+
+          <div class="rating-pill">
+            <span class="star">★</span>
+            <span><strong>Network:</strong> educational node → Fragrance.bio comparisons.</span>
+          </div>
+        </aside>
+      </section>
+
+      <!-- SPELLING -->
+      <section id="spelling" class="card" aria-labelledby="spelling-heading">
+        <h2 id="spelling-heading" class="section-title">Parfume vs perfume vs fragrance</h2>
+        <p class="section-subtitle">
+          These terms overlap, but shoppers use them differently depending on region and context.
+        </p>
+
+        <ul class="checklist">
+          <li><strong>“Perfume”</strong> is the most common English retail word for a fragrance product (especially women’s marketing).</li>
+          <li><strong>“Fragrance”</strong> is broader and more neutral: can describe men’s, women’s, and unisex scents, plus category-level talk.</li>
+          <li><strong>“Parfume/Parfum”</strong> is common in EU/Scandinavian usage and can refer to the category or the concentration label “Parfum”.</li>
+        </ul>
+
+        <p class="section-subtitle" style="margin-top: 10px;">
+          If your goal is “what should I buy?”, jump to the main comparison hub:
+        </p>
+
+        <div class="hero-actions" style="margin-top: 12px;">
+          <a href="https://www.fragrance.bio/?utm_source=parfume.bio&utm_medium=referral&utm_campaign=network"
+             class="btn-primary" target="_blank" rel="noopener">
+            Best fragrances & buying guides ›
+          </a>
+        </div>
+      </section>
+
+      <!-- CONCENTRATION -->
+      <section id="concentration" class="card" aria-labelledby="conc-heading">
+        <h2 id="conc-heading" class="section-title">EDT vs EDP vs Parfum (concentration basics)</h2>
+        <p class="section-subtitle">
+          “Concentration” labels describe the relative amount of fragrance compounds — but real performance depends on formula and notes.
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Label</th>
+                <th scope="col">Typical feel</th>
+                <th scope="col">Typical use</th>
+                <th scope="col">Expectations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>EDT</strong></td>
+                <td>Often lighter, brighter</td>
+                <td>Daytime, office, warm weather</td>
+                <td>Can project well but may fade earlier; not always “weak”.</td>
+              </tr>
+              <tr>
+                <td><strong>EDP</strong></td>
+                <td>Often richer, smoother</td>
+                <td>All-rounder, evenings</td>
+                <td>Often longer-lasting, but not guaranteed.</td>
+              </tr>
+              <tr>
+                <td><strong>Parfum</strong></td>
+                <td>Denser, more concentrated</td>
+                <td>Evenings, cold weather</td>
+                <td>Can be very long-lasting; can also sit closer to skin.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="section-subtitle">
+          Practical tip: if you want something “office safe”, choose a fresh/woody profile and apply fewer sprays.
+        </p>
+      </section>
+
+      <!-- EU BUYING -->
+      <section id="eu" class="card" aria-labelledby="eu-heading">
+        <h2 id="eu-heading" class="section-title">EU buying tips (practical)</h2>
+        <p class="section-subtitle">
+          These are general considerations when shopping in the EU/EEA. Always read each retailer’s terms.
+        </p>
+
+        <ul class="checklist">
+          <li><strong>Returns:</strong> check if opened fragrances can be returned (often restricted).</li>
+          <li><strong>Testers:</strong> “tester” products may come without retail box; verify what is included.</li>
+          <li><strong>Grey market:</strong> discounted sellers exist; verify authenticity signals and return policy.</li>
+          <li><strong>Batch codes:</strong> some buyers verify batch codes, but it’s not a universal guarantee.</li>
+        </ul>
+
+        <div class="hero-highlight" style="margin-top: 12px;">
+          This site does not sell fragrances. For curated comparisons and “what to buy” lists, use Fragrance.bio.
+        </div>
+
+        <div class="hero-actions" style="margin-top: 12px;">
+          <a href="https://www.fragrance.bio/?utm_source=parfume.bio&utm_medium=referral&utm_campaign=network#top"
+             class="btn-primary" target="_blank" rel="noopener">
+            See top picks on Fragrance.bio ›
+          </a>
+          <a href="https://www.scents.bio/?utm_source=parfume.bio&utm_medium=referral&utm_campaign=network"
+             class="btn-secondary" target="_blank" rel="noopener">
+            Learn notes & families (Scents.bio) ›
+          </a>
+        </div>
+      </section>
+
+      <!-- MINI GLOSSARY + 3 BEGINNER CATEGORIES -->
+      <section class="grid" aria-label="Beginner categories">
+        <article class="card">
+          <h2>Beginner: clean everyday</h2>
+          <p>
+            If you want something safe and wearable, start with fresh/woody profiles and keep sprays minimal.
+          </p>
+          <a class="btn-primary" target="_blank" rel="noopener"
+             href="https://www.fragrance.bio/?utm_source=parfume.bio&utm_medium=referral&utm_campaign=network#top">
+            Compare everyday picks ›
+          </a>
+        </article>
+
+        <article class="card">
+          <h2>Beginner: date night</h2>
+          <p>
+            For evenings, amber/gourmand profiles are common. Choose based on how sweet you want it to be.
+          </p>
+          <a class="btn-primary" target="_blank" rel="noopener"
+             href="https://www.fragrance.bio/?utm_source=parfume.bio&utm_medium=referral&utm_campaign=network#top">
+            Compare date night picks ›
+          </a>
+        </article>
+
+        <article class="card">
+          <h2>Beginner: gifts</h2>
+          <p>
+            Gift-safe choices are usually well-known classics with broad appeal and moderate projection.
+          </p>
+          <a class="btn-primary" target="_blank" rel="noopener"
+             href="https://www.fragrance.bio/?utm_source=parfume.bio&utm_medium=referral&utm_campaign=network#gifts">
+            Gift guides ›
+          </a>
+        </article>
+      </section>
+
+      <section id="glossary" class="card faq" aria-labelledby="glossary-heading" style="margin-top: 18px;">
+        <h2 id="glossary-heading" class="section-title">Mini glossary</h2>
+
+        <h3>Parfum</h3>
+        <p>Can mean the category (perfume) or the concentration label (Parfum) depending on context.</p>
+
+        <h3>Projection</h3>
+        <p>How far the scent radiates from you.</p>
+
+        <h3>Dry-down</h3>
+        <p>The base stage after the opening fades — often the true signature.</p>
+      </section>
+
+      <section class="disclaimer">
+        <p>
+          Parfume.bio is educational and independent. For comparisons and buying guides, visit
+          <a href="https://www.fragrance.bio/?utm_source=parfume.bio&utm_medium=referral&utm_campaign=network" target="_blank" rel="noopener">Fragrance.bio</a>.
+        </p>
+        <p>
+          Some outbound links in the network may be affiliate links. See <a href="/disclosure.html">Disclosure</a>.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2025 Parfume.bio – Educational perfume guide (EU spelling).</span>
+      <span>Operated by ronarn AS, Norway. Independent information site. No paid rankings.</span>
+      <span>Contact: <a href="mailto:info@fragrance.bio">info@fragrance.bio</a></span>
+      <span>Business address: Pb. 1010 Lillestrøm Syd, 2012 Lillestrøm, Norway</span>
+
+      <span class="footer-links">
+        <a href="/about.html">About</a> ·
+        <a href="/privacy.html">Privacy</a> ·
+        <a href="/disclosure.html">Disclosure</a> ·
+        <a href="/contact.html">Contact</a>
+        <span> · </span>
+        <a href="#" onclick="window.__openPrivacySettings(); return false;">Privacy settings</a>
+      </span>
+    </footer>
+
+  </div>
+</body>
+</html>
